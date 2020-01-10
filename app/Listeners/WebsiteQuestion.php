@@ -34,8 +34,8 @@ class WebsiteQuestion
             Log::info('New Email Successfully sent');
             Mail::to('test@test.com')->send(new RegisterMail($event->data));
         }catch (\Exception $exception){
-            Log::info('Email failed to send');
-            Log::info('DATA SENT TO FAILED EMAIL: '.'Name=>'.$event->data['name'].' Question=>'.$event->data['question']);
+            Log::Error('Email failed to send');
+            Log::Error('DATA SENT TO FAILED EMAIL: '.'Name=>'.$event->data['name'].' Question=>'.$event->data['question']);
         }
 
 
