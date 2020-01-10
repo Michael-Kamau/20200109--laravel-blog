@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10b492a1-c323-4237-bbce-d4616c74430a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/CustomClasses/EncryptDecrypt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Listeners/WebsiteQuestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/WebsiteQuestion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Blogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Blogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +21,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="Git.Settings">
@@ -172,7 +179,8 @@
       <option name="presentableId" value="Default" />
       <updated>1578554387577</updated>
       <workItem from="1578554389306" duration="34972000" />
-      <workItem from="1578628146591" duration="762000" />
+      <workItem from="1578628146591" duration="1288000" />
+      <workItem from="1578639377811" duration="18907000" />
     </task>
     <servers />
   </component>
@@ -180,10 +188,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="653" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578609975088">
+    <state x="653" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578670930597">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="653" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1578609975088" />
+    <state x="653" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1578670930596" />
+    <state x="401" y="320" key="ComposerInitDialogKey" timestamp="1578677826011">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="401" y="320" key="ComposerInitDialogKey/0.0.1280.800@0.0.1280.800" timestamp="1578677826011" />
+    <state x="350" y="223" key="NewPhpClassDialog" timestamp="1578677510402">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1578677510402" />
+    <state x="461" y="330" key="NewPhpFileDialog" timestamp="1578677489458">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="461" y="330" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1578677489458" />
     <state x="464" y="130" width="816" height="540" key="find.popup" timestamp="1578565704718">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

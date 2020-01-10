@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <h3>Create Blog</h3>
+    <h3>Contact Us </h3>
     {!! Form::open(['action'=>'MainController@store','method'=>'POST']) !!}
     <div class="form-group">
         {{Form::label('name','Name')}}

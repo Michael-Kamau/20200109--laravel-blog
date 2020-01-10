@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Blog;
 use Facades\App\Repository\Blogs;
@@ -24,7 +25,9 @@ class BlogsController extends Controller
      */
     public function index()
     {
+
         $blogs =Blogs::all('created_at');
+
 
         return view('pages.index')->with('blogs',$blogs);
 
@@ -55,6 +58,8 @@ class BlogsController extends Controller
         ]);
 
         //create blog
+
+        //Blog::create($request->all());
         $blog=new Blog();
         $blog->user_id=auth()->user()->id;
         $blog->title=$request->input('title');
@@ -73,7 +78,9 @@ class BlogsController extends Controller
     public function show($id)
     {
         //
-        $blog= Blog::find($id);
+        //$blog= Blog::find($id);
+        $blog=Blog::fetchOne($id);
+        return gettype($blog);
         return view('blogs.show')->with('blog',$blog);
     }
 

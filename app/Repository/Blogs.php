@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Blog;
 use Carbon\Carbon;
 
+
 class Blogs
 {
 
@@ -19,7 +20,6 @@ class Blogs
         return cache()->remember($cacheKey,Carbon::now()->addMinutes(5),function() use($orderBy){
             return Blog::orderBy($orderBy)->get();
     });
-
         return $blogs = Blog::all();
     }
     public function get($id)
