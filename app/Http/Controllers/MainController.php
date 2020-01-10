@@ -45,7 +45,7 @@ class MainController extends Controller
         ]);
         event(new WebsiteQuestion($data));
 
-  return view('pages.index');
+  return redirect('/');
 
     }
 

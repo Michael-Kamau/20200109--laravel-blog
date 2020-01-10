@@ -27,8 +27,7 @@ class WebsiteQuestion
      */
     public function handle($event)
     {
-        //
-        Log::info('New Question From User.');
+        //Log::info('New Question From User.');
         Mail::to('test@test.com')->send(new RegisterMail($event->data));
     }
 }
