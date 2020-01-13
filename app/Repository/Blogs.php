@@ -14,16 +14,18 @@ class Blogs
 
     public function all($orderBy)
     {
+
         $key = "all.{$orderBy}";
         $cacheKey = $this->getCacheKey($key);
 
         return cache()->remember($cacheKey,Carbon::now()->addMinutes(5),function() use($orderBy){
-            return Blog::orderBy($orderBy)->get();
+            return Blog::fetchAll($orderBy);
     });
-        return $blogs = Blog::all();
+        //return $blogs = Blog::all();
     }
-    public function get($id)
+    public function getOne($id)
     {
+        return Blog::fetchOne($id);
 
     }
 

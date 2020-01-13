@@ -46,6 +46,10 @@
                     <a class="nav-link" href="/contacts">Contact Us</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+
 
             </ul>
 

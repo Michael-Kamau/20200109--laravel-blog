@@ -47,8 +47,8 @@ class Blog extends Model
     {
         return $query->where('created_at', '>',$date);
     }
-    public static function scopeFetchAll($query){
-        return $query->orderBy('created_at','asc')->get();
+    public static function scopeFetchAll($query,$orderBy){
+        return $query->orderBy($orderBy,'desc')->get();
     }
     public static function scopeFetchOne($query,$id){
         return $query->where('id',$id)->get();

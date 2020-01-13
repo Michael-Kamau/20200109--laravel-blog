@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10b492a1-c323-4237-bbce-d4616c74430a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/CustomClasses/EncryptDecrypt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/queries/HomePageBlogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/WebsiteQuestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/WebsiteQuestion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/Blogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Blogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/register-mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/register-mail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/BlogsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +135,8 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/laravel/dusk" />
+      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
     </include_path>
   </component>
   <component name="ProjectId" id="1W9GRIESQV5ovKSD8rDUjCkiwv9" />
@@ -141,6 +151,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -180,7 +191,8 @@
       <updated>1578554387577</updated>
       <workItem from="1578554389306" duration="34972000" />
       <workItem from="1578628146591" duration="1288000" />
-      <workItem from="1578639377811" duration="18907000" />
+      <workItem from="1578639377811" duration="19166000" />
+      <workItem from="1578894875876" duration="31932000" />
     </task>
     <servers />
   </component>
@@ -188,6 +200,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="670" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578934867428">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="670" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1578934867428" />
+    <state x="539" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578902015163">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="539" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1578902015163" />
     <state x="653" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578670930597">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -204,6 +224,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="461" y="330" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1578677489458" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1578933590478">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1578933590478" />
     <state x="464" y="130" width="816" height="540" key="find.popup" timestamp="1578565704718">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Blog;
 use Facades\App\Repository\Blogs;
+use Illuminate\Support\Facades\Artisan;
 
 class BlogsController extends Controller
 {
@@ -66,6 +67,8 @@ class BlogsController extends Controller
         $blog->content=$request->input('content');
         $blog->save();
 
+        Artisan::call('cache:clear');
+
         return redirect('/')->with('success','New Task Created');
     }
 
@@ -78,9 +81,7 @@ class BlogsController extends Controller
     public function show($id)
     {
         //
-        //$blog= Blog::find($id);
-        $blog=Blog::fetchOne($id);
-        return gettype($blog);
+        $blog=Blogs::fetchOne($id);
         return view('blogs.show')->with('blog',$blog);
     }
 
@@ -120,6 +121,8 @@ class BlogsController extends Controller
         //
         $blog=Blog::find($id);
         $blog->delete();
+
+        Artisan::call('cache:clear');
         return redirect('/home')->with('success',' Task Deleted');
 
     }
