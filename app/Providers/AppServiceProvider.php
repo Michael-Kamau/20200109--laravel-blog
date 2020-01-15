@@ -13,7 +13,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //Whenever a user calls an instance of this class, we'll return value from the function.
+        \App::bind('App\Billing\Mpesa', function(){
+            return new \App\Billing\Mpesa('mypersonalkey');
+        });
+
+
     }
 
     /**

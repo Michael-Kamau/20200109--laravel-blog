@@ -17,7 +17,7 @@ class Blogs
 
         $key = "all.{$orderBy}";
         $cacheKey = $this->getCacheKey($key);
-
+          // expires after 5 minutes
         return cache()->remember($cacheKey,Carbon::now()->addMinutes(5),function() use($orderBy){
             return Blog::fetchAll($orderBy);
     });

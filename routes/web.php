@@ -11,6 +11,11 @@
 |
 */
 
+
+//$data=App::make('App\Billing\Mpesa');
+
+//dd($data);
+
 Route::get('/','BlogsController@index');
 Route::get('/contacts','MainController@index');
 
