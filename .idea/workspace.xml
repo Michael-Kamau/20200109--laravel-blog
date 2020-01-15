@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10b492a1-c323-4237-bbce-d4616c74430a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/queries/HomePageBlogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Blogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Blogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blogs/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/register-mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/register-mail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/BlogsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,11 +137,13 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/emails" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
+      <recent name="$PROJECT_DIR$/resources/views/emails" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,7 +177,8 @@
       <workItem from="1578554389306" duration="34972000" />
       <workItem from="1578628146591" duration="1288000" />
       <workItem from="1578639377811" duration="19166000" />
-      <workItem from="1578894875876" duration="31932000" />
+      <workItem from="1578894875876" duration="32455000" />
+      <workItem from="1579078018536" duration="926000" />
     </task>
     <servers />
   </component>
