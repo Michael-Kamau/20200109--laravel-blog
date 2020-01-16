@@ -81,7 +81,7 @@ class BlogsController extends Controller
     public function show($id)
     {
         //
-        $blog=Blogs::fetchOne($id);
+        $blog=Blog::fetchone($id);
         return view('blogs.show')->with('blog',$blog);
     }
 
