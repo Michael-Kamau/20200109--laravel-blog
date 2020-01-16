@@ -15,11 +15,11 @@
                     <label for="blog_content">Blog Content</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="blog_content" name="blog_content"  v-model="form.content">
+                    <input type="textarea" id="blog_content" name="blog_content"  v-model="form.content">
                 </div>
             </div>
             <div class="row">
-                <input type="button" value="Add Show" @click="postShow">
+                <input type="button" value="Add Blog" @click="postBlog">
             </div>
         </form>
 
@@ -28,11 +28,26 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
+
         name: "AddBlog.vue",
         data(){
             return{
                 form:{}
+            }
+        },
+        methods:{
+            postBlog(){
+                axios.post(`http://blogs.app/blogs/create`, this.form)
+                    .then(response => {
+                        console.log(response.data)
+
+                    }).catch(e => {
+                    //this.errors.push(e)
+                    console.log(e)
+                })
+
             }
         }
     }

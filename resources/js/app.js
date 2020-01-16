@@ -22,6 +22,7 @@ window.Vue = require('vue');
 
 Vue.component('Blogs', require('./components/Blogs.vue').default);
 Vue.component('navbar', require('./components/NavBar.vue').default);
+Vue.component('addblog', require('./components/AddBlog.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
