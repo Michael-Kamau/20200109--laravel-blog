@@ -25,3 +25,5 @@ Route::resource('contacts','MainController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/api', 'BlogsController@apiFetch');

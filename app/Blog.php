@@ -22,10 +22,10 @@ class Blog extends Model
 
 
 
-    public function setContentAttribute($value)
-    {
-        return $this->attributes['content']=Crypt::encryptString($value);
-    }
+//    public function setContentAttribute($value)
+//    {
+//        return $this->attributes['content']=Crypt::encryptString($value);
+//    }
 
 
     public function getCreatedAtAttribute($value)
@@ -35,11 +35,11 @@ class Blog extends Model
 
     }
 
-    public function getContentAttribute($value){
-
-            return $this->content=Crypt::decryptString($value);;
-
-    }
+//    public function getContentAttribute($value){
+//
+//            return $this->content=Crypt::decryptString($value);;
+//
+//    }
 
 
 

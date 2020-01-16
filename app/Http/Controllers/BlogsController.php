@@ -8,6 +8,10 @@ use App\Blog;
 use Facades\App\Repository\Blogs;
 use Illuminate\Support\Facades\Artisan;
 
+use App\Http\Resources\Blog as BlogResource;
+use App\Http\Requests;
+
+
 class BlogsController extends Controller
 {
     /**
@@ -17,8 +21,9 @@ class BlogsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['show', 'index']]);
+        //$this->middleware('auth', ['except' => ['show', 'index','apiFetch']]);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,10 +32,8 @@ class BlogsController extends Controller
     public function index()
     {
 
-        $blogs =Blogs::all('created_at');
 
-
-        return view('pages.index')->with('blogs',$blogs);
+        return view('vueMain');
 
     }
 
@@ -48,83 +51,133 @@ class BlogsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'title'=>'required',
-            'content'=>'required'
-        ]);
+//        $blog=$request->isMethod('put')?Blog::findOrFail
+//        ($request->id):new Blog;
+        $blog = new Blog;
 
-        //create blog
+        //$blog->id=$request->input('id');
+        $blog->user_id = 1;
+        $blog->title = $request->input('title');
+        $blog->content = $request->input('content');
 
-        //Blog::create($request->all());
-        $blog=new Blog();
-        $blog->user_id=auth()->user()->id;
-        $blog->title=$request->input('title');
-        $blog->content=$request->input('content');
-        $blog->save();
+        if ($blog->save()) {
+            return new BlogResource($blog);
+        }
 
-        Artisan::call('cache:clear');
 
-        return redirect('/')->with('success','New Task Created');
+//        $this->validate($request, [
+//            'title' => 'required',
+//            'content' => 'required'
+//        ]);
+//
+//        //create blog
+//
+//        //Blog::create($request->all());
+//        $blog = new Blog();
+//        $blog->user_id = auth()->user()->id;
+//        $blog->title = $request->input('title');
+//        $blog->content = $request->input('content');
+//        $blog->save();
+//
+//        Artisan::call('cache:clear');
+//
+//        return redirect('/')->with('success', 'New Task Created');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
-        $blog=Blog::fetchone($id);
-        return view('blogs.show')->with('blog',$blog);
+        $blog = Blog::fetchone($id);
+        //dd($blog);
+        return new BlogResource($blog);
+        //return view('blogs.show')->with('blog', $blog);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        return'edit';
+        return 'edit';
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         //
-        return'index';
+
+        $blog = Blog::find($id);
+
+        $blog->title = $request->input('title');
+        $blog->content = $request->input('content');
+
+        if ($blog->save()) {
+            return new BlogResource($blog);
+        }
+
+
+        //return 'index';
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
-        $blog=Blog::find($id);
-        $blog->delete();
 
-        Artisan::call('cache:clear');
-        return redirect('/home')->with('success',' Task Deleted');
+        //api for delete
 
+        $blog = Blog::find($id);
+
+        if ($blog->delete()) {
+            return new BlogResource($blog);
+        }
+
+
+//        //initial implementation without vue
+//        $blog = Blog::find($id);
+//        $blog->delete();
+//
+//        Artisan::call('cache:clear');
+//        return redirect('/home')->with('success', ' Task Deleted');
+
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function apiFetch()
+    {
+        $blogs = Blogs::all();
+
+        return BlogResource::collection($blogs);
     }
 
 
