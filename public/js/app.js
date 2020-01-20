@@ -1738,8 +1738,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     postBlog: function postBlog() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://blogs.app/blogs/create", this.form).then(function (response) {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/post", this.form).then(function (response) {
         console.log(response.data);
+        _this.form = {};
+
+        _this.$emit('getBlogEvent');
       })["catch"](function (e) {
         //this.errors.push(e)
         console.log(e);
@@ -1759,6 +1764,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AddBlog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddBlog.vue */ "./resources/js/components/AddBlog.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -1770,8 +1778,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Blogs",
+  components: {
+    addblog: _AddBlog_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       blogs: [],
@@ -1794,6 +1809,21 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         _this.blogs = res.data;
         console.log(res.data);
+      });
+    },
+    deleteBlog: function deleteBlog($id) {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/blogs/" + $id, this.form).then(function (response) {
+        console.log(response.data);
+        _this2.form = {};
+
+        _this2.$emit('getBlogEvent');
+
+        _this2.fetchBlogs();
+      })["catch"](function (e) {
+        //this.errors.push(e)
+        console.log(e);
       });
     }
   },
@@ -37334,11 +37364,27 @@ var render = function() {
     [
       _c("h2", [_vm._v("Blogs")]),
       _vm._v(" "),
+      _c("addblog", { on: { getBlogEvent: _vm.fetchBlogs } }),
+      _vm._v(" "),
       _vm._l(_vm.blogs, function(blog) {
         return _c("div", { key: blog.id, staticClass: "card card-body mb-2" }, [
           _c("h3", [_vm._v(_vm._s(blog.title))]),
           _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(blog.content))])
+          _c("p", [_vm._v(_vm._s(blog.content))]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.deleteBlog(blog.id)
+                }
+              }
+            },
+            [_vm._v("Delete")]
+          )
         ])
       })
     ],

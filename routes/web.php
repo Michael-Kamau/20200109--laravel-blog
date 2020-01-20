@@ -20,6 +20,7 @@ Route::get('/','BlogsController@index');
 Route::get('/contacts','MainController@index');
 
 Route::resource('blogs','BlogsController');
+Route::post('/post','BlogsController@store');
 Route::resource('contacts','MainController');
 
 Auth::routes();

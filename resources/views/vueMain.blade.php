@@ -17,7 +17,7 @@
 <div id="app">
     <navbar></navbar>
     <div class="container">
-        <addblog></addblog>
+
         <Blogs></Blogs>
     </div>
 

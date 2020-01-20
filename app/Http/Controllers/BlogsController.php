@@ -65,9 +65,13 @@ class BlogsController extends Controller
         $blog->title = $request->input('title');
         $blog->content = $request->input('content');
 
-        if ($blog->save()) {
-            return new BlogResource($blog);
-        }
+        $blog->save();
+
+        $blogs = Blogs::all('created_at');
+        Artisan::call('cache:clear');
+
+        return BlogResource::collection($blogs);
+
 
 
 //        $this->validate($request, [
@@ -133,6 +137,7 @@ class BlogsController extends Controller
         $blog->content = $request->input('content');
 
         if ($blog->save()) {
+            Artisan::call('cache:clear');
             return new BlogResource($blog);
         }
 
@@ -152,6 +157,7 @@ class BlogsController extends Controller
         //api for delete
 
         $blog = Blog::find($id);
+        Artisan::call('cache:clear');
 
         if ($blog->delete()) {
             return new BlogResource($blog);
@@ -175,7 +181,7 @@ class BlogsController extends Controller
      */
     public function apiFetch()
     {
-        $blogs = Blogs::all();
+        $blogs = Blogs::all('created_at');
 
         return BlogResource::collection($blogs);
     }

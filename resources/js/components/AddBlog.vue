@@ -39,16 +39,20 @@
         },
         methods:{
             postBlog(){
-                axios.post(`http://blogs.app/blogs/create`, this.form)
+                axios.post(`/post`, this.form)
                     .then(response => {
                         console.log(response.data)
+                        this.form={}
+                        this.$emit('getBlogEvent')
+
 
                     }).catch(e => {
                     //this.errors.push(e)
                     console.log(e)
                 })
 
-            }
+            },
+
         }
     }
 </script>
